@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dauvao">
+    from
+    <select name="" id="select1">
+        <option value="VN">VND</option>
+        <option value="USD">USD</option>
+    </select>
+    to
+    <select name="" id="select2">
+        <option value="VN">VND</option>
+        <option value="USD">USD</option>
+    </select>
+    <button id onclick="ketqua()">Convert</button>
+    <script>
+        function ketqua() {
+            //gia tri dau vao trong form
+            let giatrivao = document.getElementById('dauvao').value;//2400
+            let select1 = document.getElementById('select1').value;//VN
+            let select2 = document.getElementById('select2').value;//USD
+            //xu ly neu nguoi chon
+            if (select1 == select2) {
+                alert(giatrivao);
+            }
+            if (select1 == "VN" && select2 == "USD") {
+                //xuat
+                alert(giatrivao/24000);
+            }
+            if (select1 == "USD" && select2 == "VN") {
+                //xuat
+                alert(giatrivao * 24000);
+            }
+        }
+    </script>
+</body>
+</html>
