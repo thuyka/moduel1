@@ -8,8 +8,14 @@
 </head>
 <body>
     <script>
-    <td></td>
-    
+    let x = [-3, 5, 1, 3, 2, 10];
+    for (let i = 0; i <x.length/2;i++) {
+        let num = x[i];
+        x[i]= x[x.length-1-i];
+        x[x.length-1-i]= num;
+    }
+    document.write(x);
     </script>
+
 </body>
 </html>
