@@ -8,14 +8,9 @@
 </head>
 <body>
     <script>
-        let message= (login== 'Emloyee')?
-        'Hello':
-        (login== 'Director')?
-        'Greetings':
-        (login== '')?
-        'no login':
-        '';
-        
+        let login= prompt("Nhập giá trị:", '');
+        let message = (login == 'Employee') ? 'hello' : (login == 'Director') ? 'Greetings' : (login == '') ? 'No login' : '';
+        alert(message);
     </script>
 </body>
 </html>
