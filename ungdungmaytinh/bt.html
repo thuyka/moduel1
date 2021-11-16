@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+        <input type="text" id="sothu1">
+        <input type="text" id="sothu2"><br>
+        <input type="button" value="Addition(+)" onclick="cong()">
+        <input type="button" value="subtraction(-)"  onclick="tru()">
+        <input type="button" value="multiplication(*)" onclick="nhan()">
+        <input type="button" value="division(/)" onclick="chia()"><br>
+        <h1>Kết quả:</h1><h1 id="ketqua"></h1>
+    </form>
+    <script>
+        function cong() {
+            var sothu1 = document.getElementById('sothu1').value;
+        var sothu2 = document.getElementById('sothu2').value;
+        var ketqua = "";
+            sothu1 = parseInt(sothu1);
+            sothu2 = parseInt(sothu2);
+            ketqua = sothu1 + sothu2;
+            document.getElementById('ketqua').innerHTML = ketqua;
+        }
+        function tru() {
+            var sothu1 = document.getElementById('sothu1').value;
+        var sothu2 = document.getElementById('sothu2').value;
+        var ketqua = "";
+            sothu1 = parseInt(sothu1);
+            sothu2 = parseInt(sothu2);
+            ketqua = sothu1 - sothu2;
+            document.getElementById('ketqua').innerHTML = ketqua;
+        }
+        function nhan() {
+            var sothu1 = document.getElementById('sothu1').value;
+        var sothu2 = document.getElementById('sothu2').value;
+        var ketqua = "";
+            sothu1 = parseInt(sothu1);
+            sothu2 = parseInt(sothu2);
+            ketqua = sothu1 * sothu2;
+            document.getElementById('ketqua').innerHTML = ketqua;
+        }
+        function chia() {
+            var sothu1 = document.getElementById('sothu1').value;
+        var sothu2 = document.getElementById('sothu2').value;
+        var ketqua = "";
+            sothu1 = parseInt(sothu1);
+            sothu2 = parseInt(sothu2);
+            ketqua = sothu1 / sothu2;
+            document.getElementById('ketqua').innerHTML = ketqua;
+        }
+    </script>
+       
+</body>
+</html>
