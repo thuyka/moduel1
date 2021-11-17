@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       <img  id="myImage" src="https://media.istockphoto.com/photos/cow-isolated-picture-id1172757985?b=1&k=20&m=1172757985&s=612x612&w=0&h=pzF_D3Iu580DkO7UlSuQivRtBaCAguFZ-0eLUgo-xd0="/><br>
+      
+       <input type="button" value="click me" onclick="moveRight();" />
+     </form>
+     <script>  
+         imgObj = document.getElementById('myImage');
+         function init() {
+          imgObj.style.position = 'relative';
+          imgObj.style.left = '0px';
+         }
+        function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+        }
+            window.onload = init;
+     </script>
+    </form>
+</body>
+</html>
