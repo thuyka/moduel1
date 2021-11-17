@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="docReady()">
+    <form>
+        <img id="cow"
+            src="https://media.istockphoto.com/photos/cow-isolated-picture-id1172757985?b=1&k=20&m=1172757985&s=612x612&w=0&h=pzF_D3Iu580DkO7UlSuQivRtBaCAguFZ-0eLUgo-xd0="
+            style="position:absolute;left:0; top:0;" height="300" width="300" />
+        <script>
+               function docReady() {
+                window.addEventListener('keydown', moveSelection);
+            }
+               function moveSelection(evt) {
+                console.log(evt.keyCode);
+                switch (evt.keyCode) {
+                    case 37:
+                        leftArrowpressed();
+                        break;
+                    case 39:
+                        rightArrowPressed();
+                        break;
+                    case 38:
+                        upArrowPressed();
+                        break;
+                    case 40:
+                        downArrowpressed();
+                        break;
+                }
+            }
+            function upArrowPressed() {
+                let element = document.getElementById("cow");
+                element.style.top = parseInt(element.style.top) - 5 + 'px';
+            }
+            function downArrowpressed() {
+                let element = document.getElementById("cow");
+                element.style.top = parseInt(element.style.top) + 5 + 'px';
+            }
+            function leftArrowpressed() {
+                let element = document.getElementById("cow");
+                element.style.left = parseInt(element.style.left) - 5 + 'px';
+            }
+            function rightArrowPressed() {
+                let element = document.getElementById("cow");
+                element.style.left = parseInt(element.style.left) + 5 + 'px';
+            }
+         
+        </script>
+    </form>
+</body>
+</html>
