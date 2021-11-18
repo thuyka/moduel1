@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder=" height" id="height"> <br> <br>
+    <input type="text" placeholder="weight" id="weight"> <br> <br>
+    <input type="button" value="check" onclick="check()"> <br>
+    <span> chỉ số bmi là:</span> <br>
+    <div id="bmi"> </div> <br>
+    <span> đánh giá:</span> <br>
+    <div id="result"> </div> <br>
+    <script>
+        function check() {
+            let height = document.getElementById("height").value;
+            let weight = document.getElementById("weight").value;
+            let bmi = weight / (height ** 2);
+            let result;
+            if (bmi < 15) {
+                result = "underweight"
+            }
+            else if (15 <bmi < 20) {
+                result = "normal"
+            }
+            else if (bmi < 25) {
+                result = "Overweight";
+            }
+            else {
+                result = "Obese";
+            }
+            document.getElementById("bmi").innerHTML = bmi;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
