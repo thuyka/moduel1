@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <h1>Add New Product</h1>
+        <input type="text" name="" id="brand" value="">
+        <input onclick="brandPush()" placeholder="New Product" type="button" value="ADD">
+        <h3>Display All Product</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="3">Product Name</th>
+                </tr>
+            </thead>
+            <tbody id="kq">
+            </tbody>
+        </table>
+        <script>
+            let myInput = ['Sony', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4'];
+            function brandPush() {
+                //lấy giá trị nhập vào từ ô input có id="brand"
+                let brand = document.getElementById("brand").value;//window
+                //thêm một phần tử vào mảng của hdh
+                myInput.push(brand);
+                //gọi hàm hiển thị
+                showBrand(myInput);
+            }
+            function showBrand(data) {
+                //data: ['Sony', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4']
+                let tableHtml = "";
+                // duyệt mảng
+                for (let i = 0; i < data.length; i++) {
+                    const element = data[i];
+                    tableHtml += "<tr>";
+                    tableHtml += "<td>" + element + "</td>";
+                    tableHtml += "<td>";
+                    tableHtml += ' <input onclick="editValue(' + i + ')" type="button" value="Edit" style="background-color: aquamarine"> </td';
+                    tableHtml += "</td>";
+                    tableHtml += "<td>";
+                    tableHtml += ' <input onclick="del(' + i + ')" type="button" value="Delete" style="background-color: aquamarine"> </td';
+                    tableHtml += "</td>";
+                    tableHtml += "</tr>";
+                }
+                console.log(tableHtml);
+                //tìm phần tử có id="kq" và đưa nội dung html vào
+                document.getElementById("kq").innerHTML = tableHtml;
+            }
+            function del(index) {
+                myInput.splice(index, 1); //index đag có gtri=i. splice xóa 1 gtri. 
+                showBrand(myInput);
+            }
+            function editValue(index) {
+                myInput[index] = prompt('thay đổi giá trị '+myInput[index] + ' thành:');
+                showBrand(myInput);
+            }
+
+        </script>
+    </body>
+
+</html>
