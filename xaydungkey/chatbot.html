@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBox</title>
+    <style>
+        body{
+            background:linear-gradient(120deg,#373d3b,#ac748f);
+        }
+        .me {
+            max-width: 150px;
+            height: 40px;
+            background-color: lightgray;
+            margin-left: 48%;
+            margin-bottom: 20px;
+            border-radius: 30px
+        }
+
+        .me p {
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+        .you {
+            max-width: 170px;
+            height: 40px;
+            background-color: lightgray;
+            margin-left: 2%;
+            margin-bottom: 20px;
+            border-radius: 30px
+        }
+
+        .you p {
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+        #messagesField {
+            overflow: scroll;
+            width: 466px;
+            height: 68vh;
+        }
+        </style>
+    </head>
+    
+    <body>
+    <h1 style="text-align: center; color:white">My Phone</h1>
+    <div style="margin-left: 367px;">
+        <img src="./images/ip 5s.png" style="width: 781px; height:655px" onclick="getScreen()">
+        <div style= "margin-left: 227px; margin-top: -562px;position: absolute;" >
+            <div id="messagesField" style="width: 310px; height: 430px; background-color:lightgreen"></div>
+            <div id="inputField">
+                
+                <input type="text" id="inputBox" style="width: 250px; height:25px">
+                <input type="button" value="Send" onclick="getData()" style="width: 48px; height:31px">
+                
+            </div>
+        </div>
+        <div id="blackField" style="width: 321px; height: 471px; background-color:black;position: absolute;margin-top:-566px;margin-left: 222px; display: block;"></div>
+    </div>
+</body>
+<script src="./scripts.js"></script>
+<script src="./QA.js"></script>
+
+</html>
